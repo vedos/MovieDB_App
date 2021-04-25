@@ -3,8 +3,7 @@
 -----------------------*/
 .product {
   padding-bottom: 60px;
-  padding-top: 80px;
-
+    padding-top: 80px;
 }
 
 .product-page {
@@ -34,6 +33,7 @@
 
 .product__item__pic {
   height: 325px;
+  width: 200px;
   position: relative;
   border-radius: 5px;
 
@@ -76,6 +76,7 @@
 
 .product__item__text {
   padding-top: 20px;
+  width: 200px;
 
   ul {
     margin-bottom: 10px;

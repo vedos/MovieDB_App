@@ -428,6 +428,7 @@ ol {
 .header__right {
 	text-align: right;
 	padding: 20px 0 15px;
+	width: 300px;
 }
 
 .header__right a {
@@ -439,6 +440,14 @@ ol {
 
 .header__right a:last-child {
 	margin-right: 0;
+}
+
+.input-search {
+	margin-right: 10px;
+	padding: 3px;
+	background: #070720;
+	color: whitesmoke;
+	border-radius: 5px;
 }
 
 .slicknav_menu {

@@ -1,16 +1,15 @@
 <div class="col-lg-4 col-md-6 col-sm-6">
     <div class="product__item">
-        <div class="product__item__pic set-bg" data-setbg="img/trending/trend-1.jpg" style="background-image: url(&quot;img/trending/trend-1.jpg&quot;);">
-            <div class="ep">18 / 18</div>
-            <div class="comment"><i class="fa fa-comments"></i> 11</div>
-            <div class="view"><i class="fa fa-eye"></i> 9141</div>
+        <div class="product__item__pic set-bg" [ngStyle]="{'background-image': 'url(' + item?.imageUrl + ')'}" >
+            <div class="ep">{{ item?.rating }}</div>
+            <!-- <div class="comment"><i class="fa fa-comments"></i> 11</div> -->
+            <div class="view"><i class="fa  fa-calendar-o"></i> {{ item?.releaseDate | date:'mediumDate' }}</div>
         </div>
         <div class="product__item__text">
             <ul>
-                <li>Active</li>
-                <li>Movie</li>
+                <li>{{ item?.category }}</li>
             </ul>
-            <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+            <h5><a href="#">{{ item?.title }}</a></h5>
         </div>
     </div>
 </div>
