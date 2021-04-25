@@ -1,0 +1,8 @@
+export class SingleItem {
+    title: string;
+    description: string;
+    release_date?: Date;
+    category: string;
+    rating: string;
+    imageUrl: string;
+}
