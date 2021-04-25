@@ -44,9 +44,7 @@ export class HomeComponent implements OnInit {
           
         }else{
           this.items = data;
-        }
-        
-        
+        }      
       },
       error => {
         // this.alertService.error(error);

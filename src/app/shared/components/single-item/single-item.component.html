@@ -1,15 +1,45 @@
 <div class="col-lg-4 col-md-6 col-sm-6">
     <div class="product__item">
         <div class="product__item__pic set-bg" [ngStyle]="{'background-image': 'url(' + item?.imageUrl + ')'}" >
-            <div class="ep">{{ item?.rating }}</div>
+            <div class="ep">{{ item?.rating  | number: '1.0-1' }}</div>
             <!-- <div class="comment"><i class="fa fa-comments"></i> 11</div> -->
             <div class="view"><i class="fa  fa-calendar-o"></i> {{ item?.releaseDate | date:'mediumDate' }}</div>
         </div>
-        <div class="product__item__text">
-            <ul>
-                <li>{{ item?.category }}</li>
-            </ul>
-            <h5><a href="#">{{ item?.title }}</a></h5>
+
+
+
+    <div class="rating-show">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <fieldset class="">
+                        <input type="radio" [id]="'star1' + item?.id" name="rating" value="1" (change)="change(1)" />
+                        <label class="full" for="star1" ></label> 
+                        <input type="radio" [id]="'star2' + item?.id" name="rating" value="2" (change)="change(2)" />
+                        <label class="full" for="star2" ></label> 
+                        <input type="radio" [id]="'star3' + item?.id" name="rating" value="3"  (change)="change(3)" />
+                        <label class="full" for="star3"></label>
+                        <input type="radio" [id]="'star4' + item?.id" name="rating" value="4"  (change)="change(4)" />
+                        <label class="full" for="star4" ></label>
+                        <input type="radio" [id]="'star5' + item?.id" name="rating" value="5"  (change)="change(5)" />
+                        <label class="full" for="star5" ></label> 
+                        <input type="radio" class="reset-option" name="rating" value="reset" /> 
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="product__item__text">
+        <ul>
+            <li>{{ item?.category }}</li>
+        </ul>
+        <h5><a href="#">{{ item?.title }}</a></h5>
+    </div>
+
+
 </div>
+</div>
+
